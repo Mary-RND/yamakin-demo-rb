@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<link rel="icon" href="data:,">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Демо-срез: конкурентное поле РБ — восстановление зубов</title>
@@ -23,7 +22,7 @@
   #gate button:hover { background:var(--blue2); }
   #gate .err { color:#c62828; font-size:13px; height:16px; margin-top:10px; }
   /* ---------- Контент ---------- */
-  #app { display:none; }
+  #app {}
   header { background:linear-gradient(150deg, var(--blue), var(--blue2)); color:#fff; padding:34px 6vw 28px; }
   header h1 { font-size:26px; font-weight:600; }
   header .sub { opacity:.85; font-size:14px; margin-top:8px; }
@@ -67,60 +66,102 @@
 </head>
 <body>
 
-<div id="gate">
-  <div class="box">
-    <h1>Демо-срез · Республика Беларусь</h1>
-    <p>Конкурентное поле: восстановление зубов. Защищённый просмотр (AES-GCM, ключ = пароль).</p>
-    <input id="pwd" type="password" placeholder="Пароль доступа" autocomplete="off">
-    <button onclick="unlock()">Открыть дашборд</button>
-    <div class="err" id="err"></div>
+<div id="app">
+<header>
+  <h1>Демо-срез конкурентного поля: композиты и адгезивы, частный рынок РБ</h1>
+  <div class="sub">Система анализа рынка А•Кейс — Yamakin Co., Ltd. · Данные на 05.11.2026 · Категории подтверждённости A/B/C</div>
+  <br>
+  <div class="kpis">
+    <div class="kpi"><div class="n">5</div><div class="l">строк демо-реестра: 3 бренда-конкурента + 2 эталона Yamakin</div></div>
+    <div class="kpi"><div class="n">3</div><div class="l">РУ конкурентов подтверждены в госреестре РБ (rceth.by)</div></div>
+    <div class="kpi"><div class="n">96</div><div class="l">действующих мед. лицензий с «стоматолог» в наименовании держателя (ЕРЛ) — нижняя граница частного сегмента</div></div>
+    <div class="kpi"><div class="n">1 992</div><div class="l">действующих медицинских лицензий всего (ЕРЛ, 05.11.2026)</div></div>
   </div>
+</header>
+
+<main>
+  <h2>Карточки конкурентов</h2>
+  <div class="cards">
+    <div class="card">
+      <h3><span class="tag ok">В ПРОДАЖЕ</span>Charisma Classic / Smart</h3>
+      <div class="mfr">Kulzer GmbH · Германия · РУ ИМ-7.109013/2510, ИМ-7.108919/2510 (07.10.2025, бессрочно)</div>
+      <ul>
+        <li>Микрогибридный универсальный композит</li>
+        <li>Розница: refill 4 г — <span class="price">27,84 BYN</span></li>
+        <li><span class="tag reg">импортёр</span>ЗАО «Белмедпоставка» (= магазин dentalshop.by)</li>
+        <li>Каналы: dentalshop.by · ozon.by · wildberries.by</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3><span class="tag ok">В ПРОДАЖЕ</span>Estelite Sigma Quick / OMNICHROMA</h3>
+      <div class="mfr">Tokuyama Dental · Япония · РУ ИМ-7.115661 (18.06.2024, бессрочно)</div>
+      <ul>
+        <li>OMNICHROMA — единственный зарегистрированный в РБ однооттеночный композит</li>
+        <li> <span class="price">150,60 BYN</span> (шприц 4 г, в наличии); набор 3×3,8 г — <span class="price">328,05 BYN</span></li>
+        <li><span class="tag reg">партнёр</span>ВМК-Дент (Минск) — ключевой партнёр эксклюзивного дистрибьютора ГК ПРОТЕКО</li>
+        <li>Каналы: shop.vmk-dent.by · ozon.by · medcatalog.by</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3><span class="tag vol">КАТАЛОГ БЕЗ ОСТАТКА</span>BEAUTIFIL II</h3>
+      <div class="mfr">SHOFU INC. · Япония · РУ ИМ-7.112210 (до 14.07.2027)</div>
+      <ul>
+        <li>Гиомер с выделением фтора; 13 оттенков; шприцы 4,5 г и капсулы 0,25 г</li>
+        <li>5 открытых карточек в РБ-каталоге — все «Нет в наличии», цены нет</li>
+        <li><span class="tag reg">бренд</span>Shofu представлен «Беломнимед» (уровень связи уточняется)</li>
+        <li>Каналы: lumedix.by · belomnimed.by · ozon.by</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3><span class="tag reg">ОТДЕЛЬНО</span>Charisma Diamond One</h3>
+      <div class="mfr">Kulzer GmbH · Германия · РУ в РБ: НЕ ЗАРЕГИСТРИРОВАН</div>
+      <ul>
+        <li>Новое поколение линейки — продвигается производителем за рубежом</li>
+        <li>В реестре РУ РБ отсутствует (проверено поиском по «Charisma»: только Smart и Classic)</li>
+        <li>Аргумент позиционирования: новое поколение конкурента пока не задаёт стандарт РБ-рынка</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3><span class="tag ok">ЭТАЛОН · A</span>A•UNO / iGOS / TMR (Yamakin)</h3>
+      <div class="mfr">Yamakin Co., Ltd. · Япония · РУ ИМ-7.119524 (22.07.2026, бессрочно)</div>
+      <ul>
+        <li>5 позиций: iGOS-BOND, TMR AQUA BOND 0, A•UNO, iGOS, TMR Z Fill 10</li>
+        <li>Держатель = изготовитель (без посредников)</li>
+        <li>«Одним оттенком» — формулировка встречается в реестре РБ ровно 1 раз (A•UNO)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Сводная таблица реестра (экран демо-файла «Демо_реестр_конкурентов.xlsx»)</h2>
+  <table>
+    <tr><th>№</th><th>Сегмент</th><th>Бренд / вариант</th><th>№ РУ РБ</th><th>Присутствие в продаже</th><th>Статус игрока</th><th>Цена (витрина)</th><th>Подтверждённость</th></tr>
+    <tr class="ref"><td>1</td><td>Композит универсальный</td><td>iGOS Universal (Yamakin)</td><td>ИМ-7.119524 (поз. 4)</td><td>— эталон заказчика</td><td>—</td><td>—</td><td>A</td></tr>
+    <tr class="ref"><td>2</td><td>Адгезив самопротравл.</td><td>TMR AQUA BOND 0 (Yamakin)</td><td>ИМ-7.119524 (поз. 2)</td><td>— эталон заказчика</td><td>—</td><td>—</td><td>A</td></tr>
+    <tr class="br"><td>3</td><td>Композит микрогибрид</td><td>Charisma Classic / Smart</td><td>ИМ-7.109013/2510; ИМ-7.108919/2510</td><td>Розница с ценой + маркетплейсы</td><td>Действующий продавец; импортёр — ЗАО «Белмедпоставка»</td><td>27,84 BYN</td><td>B</td></tr>
+    <tr class="br"><td>4</td><td>Композит наногибрид; 1 оттенок</td><td>Estelite Σ Quick / OMNICHROMA</td><td>ИМ-7.115661</td><td>В наличии, 2 карточки с ценами</td><td>ВМК-Дент — ключевой партнёр ГК ПРОТЕКО</td><td>150,60 / 328,05 BYN</td><td>A/B</td></tr>
+    <tr class="br"><td>5</td><td>Композит гиомер</td><td>BEAUTIFIL II</td><td>ИМ-7.112210</td><td>Каталог присутствует; продажи не подтверждены</td><td>Каталог без остатка; «Беломнимед»</td><td>—</td><td>B</td></tr>
+  </table>
+
+  <h2>Три находки для решения о полном проекте</h2>
+  <div class="bridge">
+    <p><b>1. Поле прямых конкурентов узкое.</b> В нише универсального светоотверждаемого композита частного сегмента РБ работают три сильных бренда (Kulzer, Tokuyama, Shofu). Формат «один оттенок» в реестре РБ представлен минимально: по поиску реестра заявлено лишь одно зарегистрированное предложение (OMNICHROMA, Tokuyama) — прямых сопоставимых продуктов мало, позиционирование A•UNO дифференцировано и защищено.</p>
+    <p style="margin-top:10px"><b>2. Каналы концентрированы и просчитываются.</b> Основные наблюдаемые каналы — 4–6 белорусских специализированных игроков и маркетплейсы. Ниша (96 действующих лицензий со «стоматолог» в наименовании держателя) физически доступна для прямых контактов на полном этапе. Получение полного списка адресов клиник — задача полного проекта (адреса в публичном API ЕРЛ закрыты — это подтверждено технически).</p>
+    <p style="margin-top:10px"><b>3. Часть заявленного конкурентов не доходит до продажи.</b> BEAUTIFIL II: зарегистрирован, выставлен в каталогах, но в продаже не подтверждён. Charisma Diamond One (новое поколение линейки Kulzer) в РБ не зарегистрирован — продавать его здесь будет нельзя до получения РУ. Полный проект уточнит эти статусы до уровня «официальный представитель / действующий продавец / партнёр» по каждому звену.</p>
+  </div>
+
+  <h2>Мост к полному проекту (этапы 1–3 полного проекта засчитываются за счёт демо-среза)</h2>
+  <div class="bridge">
+    <p>Этап 1 (реестр РУ): <b>закрыт на 100%</b> — 3 слота с РУ + эталон. Этап 2 (каналы): <b>закрыт на демо-уровне</b> — 24 источника с URL и датами обращения; в полном проекте расширяется до 25–40 брендов и выгрузки дилерских списков. Этап 3 (статусы игроков): <b>каркас собран</b> — 3 связки «импортёр/дистрибьютор/партнёр» идентифицированы по публичным источникам; в полном проекте уточняется по сайтам изготовителей и переговорным рекомендациям.</p>
+    <p style="margin-top:10px">Итог полного этапа: реестр 25–40 брендов + карта каналов + расчёт объёма (2 модели) + статус каждого звена — по этой же структуре. Адаптация методики — по запросу до старта.</p>
+  </div>
+</main>
+
+<footer>
+  <div>Категории подтверждённости: A — государственные реестры и документы; B — открытые источники, подтверждённые не менее чем дважды, с URL и датой обращения; C — расчётные оценки с допущениями. Полный реестр и материалы следа (Демо_выписка_РУ_День1.txt, Демо_каналы_День2.txt, Демо_лицензии_96_raw.json) прилагаются.</div>
+  <div class="pass-note" style="margin-top:6px">Контроль доступа — лёгкая защита демо-материалов (client-side), не заменяет официальную передачу по e-mail/каналу заказчика.</div>
+</footer>
 </div>
 
-<div id="app" style="display:none"></div>
-<noscript><div style="padding:24px">Включите JavaScript — без него защищённый дашборд не откроется.</div></noscript>
 
-<script>
-(function(){
-  var _e = document.getElementById("err");
-  window.addEventListener("error", function(ev){
-    if (_e && ev && ev.message) { _e.textContent = "Ошибка страницы: " + ev.message; }
-  });
-})();
-const VAULT  = "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";
-const NONCE  = "4QRP0YFRnRp2om06";
-const HINT   = "Пароль маленькими латинскими буквами, без пробелов";
-function sanitize(s){ return s.replace(/[\u00A0\u2007\u202F\u200B-\u200D\uFEFF\s]+/g, ""); }
-async function unlock(){
-  const errEl = document.getElementById("err");
-  if (!window.crypto || !crypto.subtle) { errEl.textContent = "Браузер не поддерживает WebCrypto — откройте страницу в свежем Chrome/Edge/Safari"; return; }
-  const pw = sanitize(document.getElementById("pwd").value);
-  if (!pw) { errEl.textContent = "Введите пароль"; return; }
-  const raw = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(pw));
-  const key = await crypto.subtle.importKey("raw", raw, "AES-GCM", true, ["decrypt"]);
-  try {
-    const plain = await crypto.subtle.decrypt(
-      {name:"AES-GCM", iv:Uint8Array.from(atob(NONCE), c=>c.charCodeAt(0))},
-      key, Uint8Array.from(atob(VAULT), c=>c.charCodeAt(0)));
-    document.getElementById("app").innerHTML = new TextDecoder().decode(plain);
-    document.getElementById("app").style.display = "block";
-    document.getElementById("gate").style.display = "none";
-  } catch(e) { errEl.textContent = "Неверный пароль. " + HINT; }
-}
-function bind() {
-  var p = document.getElementById("pwd");
-  if (p) { p.addEventListener("keydown", function(e){ if (e.key === "Enter") unlock(); }); }
-}
-function boot(){
-  bind();
-  try {
-    const m = /(?:^|[&#])k=([^&]+)/.exec(location.hash || "");
-    if (m) { document.getElementById("pwd").value = decodeURIComponent(m[1]); unlock(); return; }
-  } catch(e) {}
-  document.getElementById("err").textContent = "Страница загружена. Введите пароль и нажмите «Открыть дашборд».";
-}
-if (document.readyState === "complete" || document.readyState === "interactive") { boot(); }
-else { window.addEventListener("DOMContentLoaded", boot); window.addEventListener("load", boot); }
-</script>
 </body>
 </html>
